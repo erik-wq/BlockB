@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <RemoteTarget>-743272006;192.168.137.115 (username=, port=22, authentication=Password)</RemoteTarget>
+    <PreLaunchCommand>export DISPLAY=:0.0</PreLaunchCommand>
+    <DebuggerFlavor>LinuxDebugger</DebuggerFlavor>
+    <RemoteDebuggingTarget>-743272006;192.168.137.115 (username=, port=22, authentication=Password)</RemoteDebuggingTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ShowAllFiles>false</ShowAllFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+    <RemoteDebuggingTarget>-743272006;192.168.137.115 (username=, port=22, authentication=Password)</RemoteDebuggingTarget>
+    <DebuggerFlavor>LinuxDebugger</DebuggerFlavor>
+    <RemoteTarget>-743272006;192.168.137.115 (username=, port=22, authentication=Password)</RemoteTarget>
+    <PreLaunchCommand>export DISPLAY=:0.0</PreLaunchCommand>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <RemoteTarget>-743272006;192.168.137.115 (username=, port=22, authentication=Password)</RemoteTarget>
+    <PreLaunchCommand>export DISPLAY=:0.0</PreLaunchCommand>
+    <DebuggerFlavor>LinuxDebugger</DebuggerFlavor>
+    <RemoteDebuggingTarget>-743272006;192.168.137.115 (username=, port=22, authentication=Password)</RemoteDebuggingTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+    <RemoteTarget>-743272006;192.168.137.115 (username=, port=22, authentication=Password)</RemoteTarget>
+    <PreLaunchCommand>export DISPLAY=:0.0</PreLaunchCommand>
+    <DebuggerFlavor>LinuxDebugger</DebuggerFlavor>
+    <RemoteDebuggingTarget>-743272006;192.168.137.115 (username=, port=22, authentication=Password)</RemoteDebuggingTarget>
+  </PropertyGroup>
+</Project>

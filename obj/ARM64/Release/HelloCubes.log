@@ -1,0 +1,10 @@
+﻿  Validating sources
+  Copying sources remotely to '192.168.137.115'
+  Validating architecture
+  Validating architecture
+  Starting remote build
+  Compiling sources:
+  EventManager.cpp
+  ResourceManager.cpp
+  Linking objects
+  HelloCubes.vcxproj -> C:\Game development\school\Perforce\Year1\BlockB\HelloCubes\bin\ARM64\Release\HelloCubes.out
