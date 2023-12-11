@@ -5,6 +5,7 @@
     <PreLaunchCommand>export DISPLAY=:0.0</PreLaunchCommand>
     <DebuggerFlavor>LinuxDebugger</DebuggerFlavor>
     <RemoteDebuggingTarget>-743272006;192.168.137.115 (username=, port=22, authentication=Password)</RemoteDebuggingTarget>
+    <RemoteDebuggingMode>gdb</RemoteDebuggingMode>
   </PropertyGroup>
   <PropertyGroup>
     <ShowAllFiles>false</ShowAllFiles>
@@ -14,17 +15,20 @@
     <DebuggerFlavor>LinuxDebugger</DebuggerFlavor>
     <RemoteTarget>-743272006;192.168.137.115 (username=, port=22, authentication=Password)</RemoteTarget>
     <PreLaunchCommand>export DISPLAY=:0.0</PreLaunchCommand>
+    <RemoteDebuggingMode>gdb</RemoteDebuggingMode>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <RemoteTarget>-743272006;192.168.137.115 (username=, port=22, authentication=Password)</RemoteTarget>
     <PreLaunchCommand>export DISPLAY=:0.0</PreLaunchCommand>
     <DebuggerFlavor>LinuxDebugger</DebuggerFlavor>
     <RemoteDebuggingTarget>-743272006;192.168.137.115 (username=, port=22, authentication=Password)</RemoteDebuggingTarget>
+    <RemoteDebuggingMode>gdb</RemoteDebuggingMode>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
     <RemoteTarget>-743272006;192.168.137.115 (username=, port=22, authentication=Password)</RemoteTarget>
     <PreLaunchCommand>export DISPLAY=:0.0</PreLaunchCommand>
     <DebuggerFlavor>LinuxDebugger</DebuggerFlavor>
     <RemoteDebuggingTarget>-743272006;192.168.137.115 (username=, port=22, authentication=Password)</RemoteDebuggingTarget>
+    <RemoteDebuggingMode>gdb</RemoteDebuggingMode>
   </PropertyGroup>
 </Project>

@@ -12,9 +12,6 @@ public:
     glm::vec3 scale = glm::vec3(1);
 
     glm::mat4 rotationMatrix = glm::mat4(1.0f);
-    glm::mat4 rotationXMatrix = glm::mat4(1.0f);
-    glm::mat4 rotationYMatrix = glm::mat4(1.0f);
-    glm::mat4 rotationZMatrix = glm::mat4(1.0f);
     glm::mat4 scaleMatrix = glm::mat4(1.0f);
 
     glm::mat4 translationMatrix = glm::mat4(1.0f);
@@ -25,22 +22,20 @@ public:
     }
 
     void UpdateMatrices() {
-        rotationRad = glm::radians(rotationDeg);
-        rotationXMatrix = glm::rotate(glm::mat4(1.0f), rotationRad.x, glm::vec3(1.0f, 0.0f, 0.0f));
-        rotationYMatrix = glm::rotate(glm::mat4(1.0f), rotationRad.y, glm::vec3(0.0f, 1.0f, 0.0f));
-        rotationZMatrix = glm::rotate(glm::mat4(1.0f), rotationRad.z, glm::vec3(0.0f, 0.0f, 1.0f));
-
-        rotationMatrix = rotationZMatrix * rotationYMatrix * rotationXMatrix;
-        scaleMatrix = glm::scale(glm::mat4(1.0f), scale);
-        translationMatrix = glm::translate(translationMatrix, position);
+        translationMatrix = glm::translate(glm::mat4(1.0f), position);
 
         modelMatrix = translationMatrix * rotationMatrix * scaleMatrix;
+
     }
 
-    glm::mat4 GetModelMatrix();
+    glm::mat4 GetModelMatrix()
+    {
+        return modelMatrix;
+    }
 
     void SetPosition(const glm::vec3& newPosition) {
         position = newPosition;
+        UpdateMatrices();
     }
 
     void SetRotation(const glm::vec3& newRotation) {

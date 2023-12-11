@@ -39,8 +39,6 @@ public:
 
             vertexCode = vShaderStream.str();
             fragmentCode = fShaderStream.str();
-
-            printf("vertex \n%s \nfragment \n%s \n", vertexCode.c_str(), fragmentCode.c_str());
         }
         catch (std::ifstream::failure& e)
         {

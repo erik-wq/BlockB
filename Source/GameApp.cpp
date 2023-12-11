@@ -7,6 +7,11 @@
 #include "ModelLoader.h"
 #include "Shader.h"
 #include "World.h"
+#include "BaseObject.h"
+#include "CustomMotionState.h"
+#include <btBulletDynamicsCommon.h>
+#include <btBulletCollisionCommon.h>
+
 
 GameApp* GameApp::instance = nullptr;
 
@@ -19,31 +24,46 @@ GameApp::GameApp()
 	input->root = windowManager->GetRootWindow();
 	input->Init(windowManager->GetCurrentDisplay(), windowManager->GetRootWindow());
 	resources = new ResourceManager();
-	mainCam = new Camera(glm::vec3(0,2,10));
+	mainCam = new Camera(glm::vec3(1,3,15));
 	mainCam->screenHeight = state->height;
 	mainCam->screenWidth = state->width;
 	worldInstance = new BulletPhysicsWorld();
 
 	// create base class for objects in scene -> transform, model , collision object
 
-	shape = new btCapsuleShape(2,1);
+	object = new BaseObject();
+	object->model = resources->GetModel("../../../Resources/Models/Madara_Uchiha.obj").get();
+
+
+	btCollisionShape* capsule = new btCapsuleShape(2,1);
 	// shape = new btSphereShape(1);
 
 	btTransform transform;
 	transform.setIdentity();
-	transform.setOrigin(btVector3(0,6,0));
+	// changing this value break moving of object
+	transform.setOrigin(btVector3(1,6,0));
 	transform.setRotation(btQuaternion(0,0,0,1));
 
-	worldInstance->AddCollisionObject(shape, transform, 1);
+	btVector3 localInertia = btVector3(0, 0, 0);
+	capsule->calculateLocalInertia(1, localInertia);
+	btMotionState* motionState = new CustomMotionState(transform, object);
+	btRigidBody::btRigidBodyConstructionInfo rbInfo(1, motionState, capsule, localInertia);
+	btRigidBody* rigidBody = new btRigidBody(rbInfo);
 
-	Cubeshape = new btBoxShape(btVector3(10,2,10));
+	worldInstance->AddRigidBody(rigidBody);
+	
+	object->rigidBody = rigidBody;
+	object->shape = capsule;
+
+	// floor
+	shape = new btBoxShape(btVector3(10,2,10));
 
 	btTransform secondtransform;
 	secondtransform.setIdentity();
 	secondtransform.setOrigin(btVector3(0, -2, 0));
 	secondtransform.setRotation(btQuaternion(0, 0, 0, 1));
 
-	worldInstance->AddCollisionObject(Cubeshape, secondtransform, 0);
+	worldInstance->AddCollisionObject(shape, secondtransform, 0);
 }
 
 GameApp::~GameApp()
@@ -53,6 +73,7 @@ GameApp::~GameApp()
 	delete resources;
 	delete mainCam;
 	delete worldInstance;
+	delete object;
 }
 
 GameApp* GameApp::GetInstance()
@@ -66,6 +87,7 @@ GameApp* GameApp::GetInstance()
 
 void GameApp::Tick(float delta)
 {
+	// object->Update();
 	worldInstance->Update(mainCam->GetProjection() * mainCam->GetViewMatrix(), delta);
 	MouseData data = input->GetMouseData();
 	mainCam->ProcessInput(data, input, delta);

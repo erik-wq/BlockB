@@ -1,3 +1,5 @@
+C:\Game development\school\Perforce\Year1\BlockB\HelloCubes\Headers\CustomMotionState.h;C:\Game development\school\Perforce\Year1\BlockB\HelloCubes\obj\ARM64\Debug\CustomMotionState.o
+C:\Game development\school\Perforce\Year1\BlockB\HelloCubes\Source\BaseObject.cpp;C:\Game development\school\Perforce\Year1\BlockB\HelloCubes\obj\ARM64\Debug\BaseObject.o
 C:\Game development\school\Perforce\Year1\BlockB\HelloCubes\Source\Camera.cpp;C:\Game development\school\Perforce\Year1\BlockB\HelloCubes\obj\ARM64\Debug\Camera.o
 C:\Game development\school\Perforce\Year1\BlockB\HelloCubes\Source\DebugDrawer.cpp;C:\Game development\school\Perforce\Year1\BlockB\HelloCubes\obj\ARM64\Debug\DebugDrawer.o
 C:\Game development\school\Perforce\Year1\BlockB\HelloCubes\Source\EventManager.cpp;C:\Game development\school\Perforce\Year1\BlockB\HelloCubes\obj\ARM64\Debug\EventManager.o
@@ -7,6 +9,7 @@ C:\Game development\school\Perforce\Year1\BlockB\HelloCubes\Source\Input.cpp;C:\
 C:\Game development\school\Perforce\Year1\BlockB\HelloCubes\Source\Mesh.cpp;C:\Game development\school\Perforce\Year1\BlockB\HelloCubes\obj\ARM64\Debug\Mesh.o
 C:\Game development\school\Perforce\Year1\BlockB\HelloCubes\Source\Model.cpp;C:\Game development\school\Perforce\Year1\BlockB\HelloCubes\obj\ARM64\Debug\Model.o
 C:\Game development\school\Perforce\Year1\BlockB\HelloCubes\Source\ModelLoader.cpp;C:\Game development\school\Perforce\Year1\BlockB\HelloCubes\obj\ARM64\Debug\ModelLoader.o
+C:\Game development\school\Perforce\Year1\BlockB\HelloCubes\Source\CustomMotionState.cpp;C:\Game development\school\Perforce\Year1\BlockB\HelloCubes\obj\ARM64\Debug\CustomMotionState.o
 C:\Game development\school\Perforce\Year1\BlockB\HelloCubes\Source\Renderer.cpp;C:\Game development\school\Perforce\Year1\BlockB\HelloCubes\obj\ARM64\Debug\Renderer.o
 C:\Game development\school\Perforce\Year1\BlockB\HelloCubes\Source\ResourceManager.cpp;C:\Game development\school\Perforce\Year1\BlockB\HelloCubes\obj\ARM64\Debug\ResourceManager.o
 C:\Game development\school\Perforce\Year1\BlockB\HelloCubes\Source\Transform.cpp;C:\Game development\school\Perforce\Year1\BlockB\HelloCubes\obj\ARM64\Debug\Transform.o

@@ -66,6 +66,9 @@
     <ClInclude Include="Headers\DebugDrawer.h">
       <Filter>Headers</Filter>
     </ClInclude>
+    <ClInclude Include="Headers\BaseObject.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Shaders\default.frag">
@@ -125,6 +128,15 @@
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\DebugDrawer.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Headers\CustomMotionState.h">
+      <Filter>Headers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\BaseObject.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CustomMotionState.cpp">
       <Filter>Source</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,8 +1,6 @@
 #pragma once
 #include "Model.h"
 #include "WindowManager.h"
-#include <btBulletDynamicsCommon.h>
-#include <btBulletCollisionCommon.h>
 
 class Input;
 class WindowManager;
@@ -11,6 +9,8 @@ class Camera;
 class Shader;
 class ModelLoader;
 class BulletPhysicsWorld;
+class BaseObject;
+class btCollisionShape;
 
 class GameApp
 {
@@ -23,6 +23,8 @@ public:
 	WindowManager* GetCurrentWindowSystem() { return windowManager; }
 	Camera* GetCurrentCamera() { return mainCam; }
 	ResourceManager* GetResources() { return resources; }
+
+	BaseObject* object;
 protected:
 	GameApp();
 
@@ -37,5 +39,4 @@ protected:
 
 	// testing bullet rendering
 	btCollisionShape* shape;
-	btCollisionShape* Cubeshape;
 };

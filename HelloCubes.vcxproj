@@ -102,6 +102,7 @@
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Headers\BaseObject.h" />
     <ClInclude Include="Headers\Camera.h" />
     <ClInclude Include="Headers\DebugDrawer.h" />
     <ClInclude Include="Headers\EventManager.h" />
@@ -136,6 +137,8 @@
     <None Include="Resources\Shaders\default.vert" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Headers\CustomMotionState.h" />
+    <ClCompile Include="Source\BaseObject.cpp" />
     <ClCompile Include="Source\Camera.cpp" />
     <ClCompile Include="Source\DebugDrawer.cpp" />
     <ClCompile Include="Source\EventManager.cpp" />
@@ -145,6 +148,7 @@
     <ClCompile Include="Source\Mesh.cpp" />
     <ClCompile Include="Source\Model.cpp" />
     <ClCompile Include="Source\ModelLoader.cpp" />
+    <ClCompile Include="Source\CustomMotionState.cpp" />
     <ClCompile Include="Source\Renderer.cpp" />
     <ClCompile Include="Source\ResourceManager.cpp" />
     <ClCompile Include="Source\Transform.cpp" />

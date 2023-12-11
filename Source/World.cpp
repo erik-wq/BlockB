@@ -18,9 +18,9 @@ void BulletPhysicsWorld::Update(glm::mat4 ProjectionView, float)
         // Process collision information here
         int numContacts = contactManifold->getNumContacts();
         if (numContacts > 0) {
-            std::cout << "Collision detected between objects: ";
-            std::cout << "Object A: " << objA->getUserPointer() << ", ";
-            std::cout << "Object B: " << objB->getUserPointer() << std::endl;
+            printf("Collision detected between objects\n");
+           //  std::cout << "Object A: " << objA->getUserPointer() << ", ";
+           //  std::cout << "Object B: " << objB->getUserPointer() << std::endl;
         }
     }
 }
@@ -31,7 +31,7 @@ void BulletPhysicsWorld::AddCollisionObject(btCollisionShape* collisionShape, bt
     if (mass != 0.0)
         collisionShape->calculateLocalInertia(mass, localInertia);
 
-    btDefaultMotionState* motionState = new btDefaultMotionState(transform);
+    btMotionState* motionState = new btDefaultMotionState(transform);
     btRigidBody::btRigidBodyConstructionInfo rbInfo(mass, motionState, collisionShape, localInertia);
     btRigidBody* rigidBody = new btRigidBody(rbInfo);
 
@@ -67,7 +67,7 @@ void BulletPhysicsWorld::InitBulletWorld() {
 
     // Create dynamics world
     dynamicsWorld = new btDiscreteDynamicsWorld(dispatcher, broadphase, solver, collisionConfiguration);
-    dynamicsWorld->setGravity(btVector3(0, -6 , 0));
+    dynamicsWorld->setGravity(btVector3(0,-1,0));
 
     EnableDebugDraw();
 }
