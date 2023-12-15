@@ -7,8 +7,6 @@
 #include <X11/Xlib.h>
 #include <X11/Xutil.h>
 #include <X11/cursorfont.h>
-#include <queue>
-#include "EventManager.h"
 
 #define Pressed 1
 #define Released 0

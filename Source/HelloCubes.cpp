@@ -50,12 +50,16 @@ Rpi4 is considered an X11 system, see the info on CMGT regarding setup of system
 #include "glm/glm.hpp"
 #include "glm/gtc/matrix_transform.hpp"
 #include <GameApp.h>
-#include "Renderer.h"
+#include "WindowManager.h"
+
+#include "imgui.h"
+#include "imgui_impl_opengl3.h"
+
+const uint sizePixels = 24;
 
 int main(int argc, char *argv[])
 {
 	GameApp* game = GameApp::GetInstance();
-	Renderer* renderer = new Renderer();
 	struct timeval t1, t2;
 	struct timezone tz;
 
@@ -65,24 +69,53 @@ int main(int argc, char *argv[])
 
 	gettimeofday(&t1, &tz);
 
+	// Create ImGui context
+	ImGui::CreateContext();
+
+	// Set ImGui context as current
+	ImGui::SetCurrentContext(ImGui::GetCurrentContext());
+	ImGui_ImplOpenGL3_Init("#version 300 es");
+	ImGui::StyleColorsClassic();
+
+	ImGuiIO& io = ImGui::GetIO();
+
+	DisplayState* state = game->GetCurrentWindowSystem()->GetDisplayState();
+
+	ImFont* font1 = io.Fonts->AddFontFromFileTTF("../../../Resources/ImGui/PixelifySans-Regular.ttf", sizePixels);
+
+	io.DisplaySize.x = static_cast<float>(state->width); // Set to your actual width
+	io.DisplaySize.y = static_cast<float>(state->height); // Set to your actual height
+
+	float fps;
+
 	while (1)
 	{
 		gettimeofday(&t2, &tz);
 		deltatime = (float)(t2.tv_sec - t1.tv_sec + (t2.tv_usec - t1.tv_usec) * 0.0000001f);
 		t1 = t2;
 
+		fps = 1.0f / deltatime;
+
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-		// std::cout << "fps "<< 1 / deltatime  << " delta time" << deltatime << '\n';
+		ImGui_ImplOpenGL3_NewFrame();
+		ImGui::NewFrame();
+
+		io.DeltaTime = deltatime;
 
 		// game Tick/Update
 		game->Tick(deltatime);
 
+		ImGui::Text("FPS:%f", fps);
+
 		// render objects
-		renderer->Render();
+		game->Render();
 	}
 
-	delete renderer;
+	// delete renderer;
 	delete game;
+	ImGui_ImplOpenGL3_Shutdown();
+	ImGui::DestroyContext();
+
 	return 0;
 }
