@@ -2,7 +2,7 @@
 
 #include "GameApp.h"
 
-#include "Objects/BaseObject.h"
+#include "Objects/Player.h"
 #include "Objects/Camera.h"
 #include "Objects/SkyBox.h"
 
@@ -32,7 +32,6 @@ Renderer::Renderer(Camera* newCam) : cam(newCam)
 	resources = game->GetResources();
 	shader = new Shader("../../../Resources/Shaders/default.vert", "../../../Resources/Shaders/default.frag");
 	skybox = new Skybox();
-
 }
 
 Renderer::~Renderer()
@@ -52,7 +51,7 @@ void Renderer::Render()
 	// get all models for rendering in level
 	// create level which wiil manage all objects for rendering
 	// td::shared_ptr<Model> model = resources->GetModel("../../../Resources/Models/Madara_Uchiha.obj");
-	BaseObject* model = GameApp::GetInstance()->object;
+	Player* model = GameApp::GetInstance()->object;
 
 	glm::mat4 projectionView = cam->GetProjection() * cam->GetViewMatrix();
 	glm::mat4 projection = cam->GetProjection();

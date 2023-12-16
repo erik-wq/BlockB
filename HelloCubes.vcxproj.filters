@@ -132,6 +132,15 @@
     <ClInclude Include="Libraries\Imgui\imstb_truetype.h">
       <Filter>Libraries\Imgui</Filter>
     </ClInclude>
+    <ClInclude Include="Headers\Application\Event.h">
+      <Filter>Headers\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Application\Factory.h">
+      <Filter>Headers\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Physics\Dispacher.h">
+      <Filter>Headers\Physics</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Shaders\default.frag">
@@ -228,6 +237,12 @@
     </ClCompile>
     <ClCompile Include="Libraries\Imgui\imgui_widgets.cpp">
       <Filter>Libraries\Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Application\Factory.cpp">
+      <Filter>Source\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Physics\Dispacher.cpp">
+      <Filter>Source\Physics</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -20,6 +20,8 @@
 #include "Objects/Player.h"
 #include "Objects/Camera.h"
 
+#include "Application/Factory.h"
+#include "Objects/Player.h"
 
 GameApp* GameApp::instance = nullptr;
 
@@ -28,75 +30,58 @@ GameApp::GameApp()
 	windowManager = new WindowManager(800, 600);
 
 	input = new Input();
+	
 	DisplayState* state = windowManager->GetDisplayState();
 	input->root = windowManager->GetRootWindow();
 	input->Init(windowManager->GetCurrentDisplay(), windowManager->GetRootWindow());
+	
 	resources = new ResourceManager();
+	
 	mainCam = new Camera(glm::vec3(1,3,15));
 	mainCam->screenHeight = state->height;
 	mainCam->screenWidth = state->width;
+
 	worldInstance = new BulletPhysicsWorld();
 
-	// create base class for objects in scene -> transform, model , collision object
+	factory = new Factory(resources, worldInstance);
 
-	btCollisionShape* capsule = new btCapsuleShape(2,1);
-	// shape = new btSphereShape(1);
+	// spawning testing floor will be replaced by tiles
+	SpawnColliderParams colliderParams;
+	colliderParams.extends = glm::vec3(10, 2, 10);
+	colliderParams.shape = Box;
+	colliderParams.type = Collision;
 
+	SpawnParams spawnParams;
+	spawnParams.colliderParams = colliderParams;
 
-	btTransform transform;
-	transform.setIdentity();
-	// changing this value break moving of object
-	transform.setOrigin(btVector3(1,6,0));
-	transform.setRotation(btQuaternion(0,0,0,1));
-
-	btVector3 localInertia = btVector3(0, 0, 0);
-	capsule->calculateLocalInertia(1, localInertia);
-	btMotionState* motionState = new CustomMotionState(transform);
-	btRigidBody::btRigidBodyConstructionInfo rbInfo(1, motionState, capsule, localInertia);
-	btRigidBody* rigidBody = new btRigidBody(rbInfo);
-	// disable deactivation for player for player
-	rigidBody->setActivationState(DISABLE_DEACTIVATION);
-
-	btGeneric6DofConstraint* dof6 = new btGeneric6DofConstraint(*rigidBody, transform, false);
-	bool bLimitAngularMotion = true;
-	if (bLimitAngularMotion) {
-		dof6->setAngularLowerLimit(btVector3(0, -SIMD_INFINITY, 0));
-		dof6->setAngularUpperLimit(btVector3(0, SIMD_INFINITY, 0));
-	}
-
-	dof6->setLinearLowerLimit(btVector3(-SIMD_INFINITY, -SIMD_INFINITY, -SIMD_INFINITY));
-	dof6->setLinearUpperLimit(btVector3(SIMD_INFINITY, SIMD_INFINITY, SIMD_INFINITY));
-
-
-	// add the constraint to the world
-	worldInstance->dynamicsWorld->addConstraint(dof6, true);
-
-	worldInstance->AddRigidBody(rigidBody);
-
-	Model* model = resources->GetModel("Madara_Uchiha.obj");
-	
-	object = new Player(Transform(),
-		model,
-		capsule,
-		rigidBody,
-		mainCam
-	);
-
-	// floor
-	shape = new btBoxShape(btVector3(10,2,10));
-
-	btTransform secondtransform;
-	secondtransform.setIdentity();
-	secondtransform.setOrigin(btVector3(0, -2, 0));
-	secondtransform.setRotation(btQuaternion(0, 0, 0, 1));
-
-	worldInstance->AddCollisionObject(shape, secondtransform, 0);
-
+	floor = factory->SpawnObject(spawnParams);
 }
 
 void GameApp::Initialize()
 {
 	renderer = new Renderer(mainCam);
+	SpawnPlayer();
+	object->SetCameraFolow(mainCam, glm::vec3(0, 4, -10));
+}
+
+void GameApp::SpawnPlayer()
+{
+	SpawnColliderParams colliderParams;
+	colliderParams.mass = 1;
+	colliderParams.extends = glm::vec3(2, 1, 0);
+	colliderParams.shape = Capsule;
+	colliderParams.type = RigidBody;
+
+	Transform tran;
+	tran.SetPosition(glm::vec3(5, 12, 0));
+
+	SpawnParams spawnParams;
+	spawnParams.colliderOfset = glm::vec3(0, 2, 0);
+	spawnParams.colliderParams = colliderParams;
+	spawnParams.modelPath = "Madara_Uchiha.obj";
+	spawnParams.transform = tran;
+
+	object = factory->SpawmPlayer(spawnParams);
 }
 
 GameApp::~GameApp()
@@ -108,6 +93,8 @@ GameApp::~GameApp()
 	delete worldInstance;
 	delete object;
 	delete renderer;
+	delete factory;
+	delete floor;
 }
 
 GameApp* GameApp::GetInstance()

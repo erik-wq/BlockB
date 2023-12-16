@@ -10,8 +10,9 @@ class Shader;
 class ModelLoader;
 class BulletPhysicsWorld;
 class BaseObject;
-class btCollisionShape;
 class Renderer;
+class Factory;
+class Player;
 
 class GameApp
 {
@@ -25,10 +26,12 @@ public:
 	WindowManager* GetCurrentWindowSystem() { return windowManager; }
 	ResourceManager* GetResources() { return resources; }
 
-	BaseObject* object;
+	Player* object;
 protected:
 	GameApp();
 	void Initialize();
+
+	void SpawnPlayer();
 
 	// instance refernce
 	static GameApp* instance;
@@ -47,5 +50,7 @@ protected:
 	BulletPhysicsWorld* worldInstance;
 
 	// testing bullet rendering, remove
-	btCollisionShape* shape;
+	BaseObject* floor;
+
+	Factory* factory;
 };

@@ -6,6 +6,7 @@
 #include "glm/ext/matrix_transform.hpp"
 
 class DebugDrawer;
+class Dispacher;
 
 class BulletPhysicsWorld {
 public:
@@ -23,12 +24,14 @@ public:
 
     void AddCollisionObject(btCollisionShape* collisionShape, btTransform transform, btScalar mass);
 
+    void AddCollisionObject(btCollisionObject*);
+
     void AddRigidBody(btRigidBody* rigidbody);
 
     void EnableDebugDraw();
 
-    // world instance
-    btDiscreteDynamicsWorld* dynamicsWorld;
+    void AddConstraint(btTypedConstraint*, bool disableColisionBetwenLinke = true);
+
 private:
 
     // broadface for early out test
@@ -36,11 +39,14 @@ private:
     // configuration
     btDefaultCollisionConfiguration* collisionConfiguration;
     //dispacher
-    btCollisionDispatcher* dispatcher;
+    Dispacher* dispatcher;
     // solver
     btSequentialImpulseConstraintSolver* solver;
     // drawer
     DebugDrawer* debugDrawer;
+
+    // world instance
+    btDiscreteDynamicsWorld* dynamicsWorld;
 
     void InitBulletWorld();
 

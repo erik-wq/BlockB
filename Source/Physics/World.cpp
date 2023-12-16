@@ -1,26 +1,13 @@
 #include "Physics/World.h"
 #include "Physics/DebugDrawer.h"
+#include "Physics/Dispacher.h"
 
 void BulletPhysicsWorld::Update(glm::mat4 ProjectionView, float delta)
 {
-    dynamicsWorld->stepSimulation(1.0f / 60, 5);
+    dynamicsWorld->stepSimulation(btScalar(delta), 5);
 
-    int numManifolds = dispatcher->getNumManifolds();
-    for (int i = 0; i < numManifolds; i++) {
-        btPersistentManifold* contactManifold = dispatcher->getManifoldByIndexInternal(i);
-
-        // Get the two colliding objects
-        const btCollisionObject* objA = contactManifold->getBody0();
-        const btCollisionObject* objB = contactManifold->getBody1();
-
-        // Process collision information here
-        int numContacts = contactManifold->getNumContacts();
-        if (numContacts > 0) {
-           // printf("Collision detected between objects\n");
-           //  std::cout << "Object A: " << objA->getUserPointer() << ", ";
-           //  std::cout << "Object B: " << objB->getUserPointer() << std::endl;
-        }
-    }
+    // collision and overlaps checking
+    dispatcher->CheckEvents();
 }
 
 void BulletPhysicsWorld::Render(glm::mat4 ProjectionView)
@@ -42,6 +29,11 @@ void BulletPhysicsWorld::AddCollisionObject(btCollisionShape* collisionShape, bt
     dynamicsWorld->addRigidBody(rigidBody);
 }
 
+void BulletPhysicsWorld::AddCollisionObject(btCollisionObject* object)
+{
+    dynamicsWorld->addCollisionObject(object);
+}
+
 void BulletPhysicsWorld::AddRigidBody(btRigidBody* rigidbody)
 {
     if (dynamicsWorld)
@@ -56,6 +48,11 @@ void BulletPhysicsWorld::EnableDebugDraw() {
     dynamicsWorld->setDebugDrawer(debugDrawer);
 }
 
+void BulletPhysicsWorld::AddConstraint(btTypedConstraint* constraint, bool disableColisionBetwenLinke)
+{
+    dynamicsWorld->addConstraint(constraint, disableColisionBetwenLinke);
+}
+
 void BulletPhysicsWorld::InitBulletWorld() {
     // Broadphase
     broadphase = new btDbvtBroadphase();
@@ -64,7 +61,7 @@ void BulletPhysicsWorld::InitBulletWorld() {
     collisionConfiguration = new btDefaultCollisionConfiguration();
 
     // Dispatcher
-    dispatcher = new btCollisionDispatcher(collisionConfiguration);
+    dispatcher = new Dispacher(collisionConfiguration);
 
     // Solver
     solver = new btSequentialImpulseConstraintSolver;

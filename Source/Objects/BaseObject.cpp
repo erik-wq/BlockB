@@ -9,13 +9,12 @@
 #include <btBulletDynamicsCommon.h>
 #include <btBulletCollisionCommon.h>
 
-BaseObject::BaseObject(const Transform& trans, Model* model, btCollisionShape* shape, btRigidBody* rigidbody) :
+BaseObject::BaseObject(const Transform& trans, btCollisionObject* collider, glm::vec3 collisionOfset ,Model* model) :
 	transform(trans),
 	model(model),
-	shape(shape),
-	rigidBody(rigidbody)
+	collisionObject(collider)
 {
-	colliderOfset = btVector3(0, 2, 0);
+	colliderOfset = btVector3(collisionOfset.x, collisionOfset.y, collisionOfset.z);
 
 	btTransform colTrans;
 	colTrans.setIdentity();
@@ -24,13 +23,12 @@ BaseObject::BaseObject(const Transform& trans, Model* model, btCollisionShape* s
 	colTrans.setOrigin(transform.getOrigin() + colliderOfset);
 	colTrans.setRotation(btQuaternion(0, 0, 0, 1));
 
-	rigidBody->setWorldTransform(colTrans);
-
+	collisionObject->setWorldTransform(colTrans);
 }
 
 void BaseObject::Update(float)
 {
-	if (rigidBody)
+	if (collisionObject)
 	{
 		btTransform tran = GetBulletTransform();
 		transform.SetPosition(tran.getOrigin() - colliderOfset);
@@ -42,9 +40,7 @@ void BaseObject::Update(float)
 
 btTransform BaseObject::GetBulletTransform()
 {
-	btTransform bulletTransform;
-	rigidBody->getMotionState()->getWorldTransform(bulletTransform);
-	return bulletTransform;
+	return collisionObject->getWorldTransform();
 }
 
 btVector3 BaseObject::ConverToBullet(glm::vec3 vec) const

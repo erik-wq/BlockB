@@ -8,24 +8,33 @@
 
 #include <btBulletDynamicsCommon.h>
 
-Player::Player(const Transform& trans, Model* model, btCollisionShape* shape, btRigidBody* rigidbody, Camera* cam) : BaseObject(trans, model, shape, rigidbody)
+Player::Player(const Transform& trans, btCollisionObject* collider, glm::vec3 colliderOfset, Model* model) : BaseObject(trans, collider, colliderOfset, model)
 {
-	camera = cam;
-	camera->folow = true;
-	cameraOfset = glm::vec3(0,4,-10);
-	originalOfset = cameraOfset;
-	MoveCamera();
+	rigidBody = dynamic_cast<btRigidBody*>(collider);
 }
 
 Player::~Player()
 {
 }
 
+void Player::SetCameraFolow(Camera* cam, glm::vec3 ofset)
+{
+	if (!cam) return;
+	camera = cam;
+	originalOfset = ofset;
+	cameraOfset = ofset;
+	UpdateOfset();
+	MoveCamera();
+}
+
 void Player::Update(float delta)
 {
 	BaseObject::Update(delta);
-	UpdateOfset();
-	MoveCamera();
+	if (camera)
+	{
+		UpdateOfset();
+		MoveCamera();
+	}
 }
 
 void Player::HandleInput(Input* Input)

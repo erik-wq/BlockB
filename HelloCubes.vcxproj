@@ -150,6 +150,7 @@
     <ClCompile Include="Libraries\Imgui\imgui_impl_opengl3.cpp" />
     <ClCompile Include="Libraries\Imgui\imgui_tables.cpp" />
     <ClCompile Include="Libraries\Imgui\imgui_widgets.cpp" />
+    <ClCompile Include="Source\Application\Factory.cpp" />
     <ClCompile Include="Source\Application\ModelLoader.cpp" />
     <ClCompile Include="Source\Application\Renderer.cpp" />
     <ClCompile Include="Source\Application\ResourceManager.cpp" />
@@ -166,10 +167,13 @@
     <ClCompile Include="Source\Objects\Skybox.cpp" />
     <ClCompile Include="Source\Physics\CustomMotionState.cpp" />
     <ClCompile Include="Source\Physics\DebugDrawer.cpp" />
+    <ClCompile Include="Source\Physics\Dispacher.cpp" />
     <ClCompile Include="Source\Physics\World.cpp" />
     <ClCompile Include="Source\WindowManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Headers\Application\Event.h" />
+    <ClInclude Include="Headers\Application\Factory.h" />
     <ClInclude Include="Headers\Application\ModelLoader.h" />
     <ClInclude Include="Headers\Application\Renderer.h" />
     <ClInclude Include="Headers\Application\ResourceManager.h" />
@@ -185,6 +189,7 @@
     <ClInclude Include="Headers\Objects\SkyBox.h" />
     <ClInclude Include="Headers\Physics\CustomMotionState.h" />
     <ClInclude Include="Headers\Physics\DebugDrawer.h" />
+    <ClInclude Include="Headers\Physics\Dispacher.h" />
     <ClInclude Include="Headers\Physics\World.h" />
     <ClInclude Include="Headers\stb_image.h" />
     <ClInclude Include="Headers\WindowManager.h" />
