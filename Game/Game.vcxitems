@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{42d61a25-9a71-415c-9fdd-d0b2eb443455}</ItemsProjectGuid>
+    <ItemsSccProjectName />
+    <ItemsSccAuxPath />
+    <ItemsSccLocalPath />
+    <ItemsSccProvider />
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Models\Barier.mtl" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Models\Cube.mtl" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Models\dancing_vampire.dae">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Models\dumpster.mtl" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Models\Floor.mtl" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Models\Madara_Uchiha.mtl" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Models\Nismo_LMGT4_Wheels.mtl" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Models\Run.dae">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Models\Running.dae">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Models\testingCubbe.mtl" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Models\testingCube.mtl" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\Rasberry\debug.frag" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\Rasberry\debug.vert" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\Rasberry\default.frag" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\Rasberry\default.vert" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\Rasberry\LightCube.frag" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\Rasberry\LightCube.vert" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\Rasberry\Lights.frag" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\Rasberry\Lights.vert" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\Rasberry\skybox.frag" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\Rasberry\skybox.vert" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\windows\debug.frag" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\windows\debug.vert" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\windows\default.frag" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\windows\default.vert" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\Windows\LightCube.frag" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\Windows\LightCube.vert" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\Windows\Lights.frag" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\Windows\Lights.vert" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\Windows\Skeletal.frag" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\Windows\Skeletal.vert" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\windows\skybox.frag" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\windows\skybox.vert" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Textures\dumpster_Displacement.exr" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\Rasberry\Skeletal.frag" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\Rasberry\Skeletal.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="$(MSBuildThisFileDirectory)Resources\Models\Barier.obj">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</ExcludedFromBuild>
+    </Object>
+    <Object Include="$(MSBuildThisFileDirectory)Resources\Models\Cube.obj">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</ExcludedFromBuild>
+    </Object>
+    <Object Include="$(MSBuildThisFileDirectory)Resources\Models\Dumpster.obj">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</ExcludedFromBuild>
+    </Object>
+    <Object Include="$(MSBuildThisFileDirectory)Resources\Models\Floor.obj">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</ExcludedFromBuild>
+    </Object>
+    <Object Include="$(MSBuildThisFileDirectory)Resources\Models\Madara_Uchiha.obj">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+    </Object>
+    <Object Include="$(MSBuildThisFileDirectory)Resources\Models\Nismo_LMGT4_Wheels.obj">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</ExcludedFromBuild>
+    </Object>
+    <Object Include="$(MSBuildThisFileDirectory)Resources\Models\testingCubbe.obj">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</ExcludedFromBuild>
+    </Object>
+    <Object Include="$(MSBuildThisFileDirectory)Resources\Models\testingCube.obj">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</ExcludedFromBuild>
+    </Object>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="$(MSBuildThisFileDirectory)Resources\ImGui\font.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\back.jpg" />
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\bottom.jpg" />
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Ch39_1001_Diffuse.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Ch39_1001_Glossiness.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Ch39_1001_Normal.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Ch39_1001_Specular.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Concrete Barricade LP_Cocncrete Barricade_Diffuse.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Concrete Barricade LP_Cocncrete Barricade_Glossiness.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Concrete Barricade LP_Cocncrete Barricade_Height.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Concrete Barricade LP_Cocncrete Barricade_Normal.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Concrete Barricade LP_Cocncrete Barricade_Specular.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\container2.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\container2_specular.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\container2_specular_colored.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\dumpster_Albedo.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\dumpster_Metalness.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\dumpster_Normal.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\dumpster_Roughness.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Floor.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\front.jpg" />
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\left.jpg" />
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\right.jpg" />
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Rims_Bump.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Rims_Clearcoat.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Rims_Diffuse.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Rims_Metallic.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Rims_Roughness.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Sharingan_texture.jpg" />
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Tire_Bump.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Tire_Diffuse.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Tire_Roughness.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\top.jpg" />
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\toy_box_diffuse.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\toy_box_disp.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\_Madara_texture_main_mAIN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="$(MSBuildThisFileDirectory)Resources\ImGui\PixelifySans-Regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Application\Factory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Application\GameApp.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Application\Renderer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Application\SpawnData.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Levels\BaseLevel.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Levels\Chunk.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Levels\InfiniteLevel.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Levels\LightsLevel.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Levels\Menu.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Objects\Player.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\UI\ControlMenu.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\UI\LevelMenu.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\UI\LoadingMenu.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\UI\MainMenu.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\UI\MenuState.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Application\Factory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Application\GameApp.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Application\Renderer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Levels\BaseLevel.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Levels\Chunk.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Levels\InfiniteLevel.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Levels\LightsLevel.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Levels\Menu.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Objects\Player.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\UI\ControlMenu.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\UI\LevelMenu.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\UI\LoadingMenu.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\UI\MainMenu.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\UI\MenuState.cpp" />
+  </ItemGroup>
+</Project>

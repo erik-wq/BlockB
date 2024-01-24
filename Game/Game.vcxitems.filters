@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{6ddf6198-928f-4545-b682-5abcd31e17e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{6512b0e0-ca46-48b8-9320-a88948e4db2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{ed3b45ef-1aa1-4c57-a2b6-d5b7f94c0647}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Shaders">
+      <UniqueIdentifier>{a5cca945-ade0-4204-a6c8-9eb08eb30f61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Models">
+      <UniqueIdentifier>{c8862e9a-0da1-414e-bc67-ee42598bead2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Textures">
+      <UniqueIdentifier>{52893d8c-7b06-4b05-9bb9-3729698e3166}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\ImGui">
+      <UniqueIdentifier>{144e77fa-39c4-4674-9770-02a1ad30bf3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Application">
+      <UniqueIdentifier>{896df23c-fcb1-43c0-8f60-feb586be9526}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Objects">
+      <UniqueIdentifier>{e6c955c3-8358-4bf0-836e-668811cc0a09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Levels">
+      <UniqueIdentifier>{e48a0c34-8b86-43a0-a419-2eb6613ed43d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Levels">
+      <UniqueIdentifier>{8b5503ba-dff2-408b-bef6-3286c660b15e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Application">
+      <UniqueIdentifier>{3351da89-0601-48bd-b2c4-a576c64f0298}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Objects">
+      <UniqueIdentifier>{941c9dff-1f53-4d92-bb80-99f6e954f662}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\UI">
+      <UniqueIdentifier>{5602a763-3876-430b-b77a-38a5b8341e8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\UI">
+      <UniqueIdentifier>{fbe6c77f-c796-4edb-b81a-abcf2b1a3e9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Shaders\Rasberry">
+      <UniqueIdentifier>{d90a14e9-8511-4f1a-b49a-bd4ff12d1d8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Shaders\Windows">
+      <UniqueIdentifier>{e8e1e14a-ce89-443d-9a17-aeed618e0ff1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Models\Madara_Uchiha.mtl">
+      <Filter>Resources\Models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\windows\debug.frag">
+      <Filter>Resources\Shaders\Windows</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\windows\debug.vert">
+      <Filter>Resources\Shaders\Windows</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\windows\default.frag">
+      <Filter>Resources\Shaders\Windows</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\windows\default.vert">
+      <Filter>Resources\Shaders\Windows</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\windows\skybox.frag">
+      <Filter>Resources\Shaders\Windows</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\windows\skybox.vert">
+      <Filter>Resources\Shaders\Windows</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\Rasberry\debug.frag">
+      <Filter>Resources\Shaders\Rasberry</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\Rasberry\debug.vert">
+      <Filter>Resources\Shaders\Rasberry</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\Rasberry\default.frag">
+      <Filter>Resources\Shaders\Rasberry</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\Rasberry\default.vert">
+      <Filter>Resources\Shaders\Rasberry</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\Rasberry\skybox.frag">
+      <Filter>Resources\Shaders\Rasberry</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\Rasberry\skybox.vert">
+      <Filter>Resources\Shaders\Rasberry</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Models\Barier.mtl">
+      <Filter>Resources\Models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Models\dumpster.mtl">
+      <Filter>Resources\Models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Models\Floor.mtl">
+      <Filter>Resources\Models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Models\Nismo_LMGT4_Wheels.mtl">
+      <Filter>Resources\Models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Textures\dumpster_Displacement.exr">
+      <Filter>Resources\Textures</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Models\dancing_vampire.dae">
+      <Filter>Resources\Models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Models\Cube.mtl">
+      <Filter>Resources\Models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Models\Run.dae">
+      <Filter>Resources\Models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Models\Running.dae">
+      <Filter>Resources\Models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Models\testingCubbe.mtl">
+      <Filter>Resources\Models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Models\testingCube.mtl">
+      <Filter>Resources\Models</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\Rasberry\LightCube.frag">
+      <Filter>Resources\Shaders\Rasberry</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\Windows\LightCube.frag">
+      <Filter>Resources\Shaders\Windows</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\Rasberry\Lights.frag">
+      <Filter>Resources\Shaders\Rasberry</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\Rasberry\LightCube.vert">
+      <Filter>Resources\Shaders\Rasberry</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\Windows\Lights.frag">
+      <Filter>Resources\Shaders\Windows</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\Windows\Lights.vert">
+      <Filter>Resources\Shaders\Windows</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\Windows\LightCube.vert">
+      <Filter>Resources\Shaders\Windows</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\Rasberry\Lights.vert">
+      <Filter>Resources\Shaders\Rasberry</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\Windows\Skeletal.frag">
+      <Filter>Resources\Shaders\Windows</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\Windows\Skeletal.vert">
+      <Filter>Resources\Shaders\Windows</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\Rasberry\Skeletal.vert">
+      <Filter>Resources\Shaders\Rasberry</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Shaders\Rasberry\Skeletal.frag">
+      <Filter>Resources\Shaders\Rasberry</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="$(MSBuildThisFileDirectory)Resources\Models\Madara_Uchiha.obj">
+      <Filter>Resources\Models</Filter>
+    </Object>
+    <Object Include="$(MSBuildThisFileDirectory)Resources\Models\Barier.obj">
+      <Filter>Resources\Models</Filter>
+    </Object>
+    <Object Include="$(MSBuildThisFileDirectory)Resources\Models\Dumpster.obj">
+      <Filter>Resources\Models</Filter>
+    </Object>
+    <Object Include="$(MSBuildThisFileDirectory)Resources\Models\Floor.obj">
+      <Filter>Resources\Models</Filter>
+    </Object>
+    <Object Include="$(MSBuildThisFileDirectory)Resources\Models\Nismo_LMGT4_Wheels.obj">
+      <Filter>Resources\Models</Filter>
+    </Object>
+    <Object Include="$(MSBuildThisFileDirectory)Resources\Models\Cube.obj">
+      <Filter>Resources\Models</Filter>
+    </Object>
+    <Object Include="$(MSBuildThisFileDirectory)Resources\Models\testingCubbe.obj">
+      <Filter>Resources\Models</Filter>
+    </Object>
+    <Object Include="$(MSBuildThisFileDirectory)Resources\Models\testingCube.obj">
+      <Filter>Resources\Models</Filter>
+    </Object>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\_Madara_texture_main_mAIN.png">
+      <Filter>Resources\Textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\back.jpg">
+      <Filter>Resources\Textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\bottom.jpg">
+      <Filter>Resources\Textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\front.jpg">
+      <Filter>Resources\Textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\left.jpg">
+      <Filter>Resources\Textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\right.jpg">
+      <Filter>Resources\Textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Sharingan_texture.jpg">
+      <Filter>Resources\Textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\top.jpg">
+      <Filter>Resources\Textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Resources\ImGui\font.png">
+      <Filter>Resources\ImGui</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Concrete Barricade LP_Cocncrete Barricade_Diffuse.png">
+      <Filter>Resources\Textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Concrete Barricade LP_Cocncrete Barricade_Glossiness.png">
+      <Filter>Resources\Textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Concrete Barricade LP_Cocncrete Barricade_Height.png">
+      <Filter>Resources\Textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Concrete Barricade LP_Cocncrete Barricade_Normal.png">
+      <Filter>Resources\Textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Concrete Barricade LP_Cocncrete Barricade_Specular.png">
+      <Filter>Resources\Textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\dumpster_Albedo.png">
+      <Filter>Resources\Textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\dumpster_Metalness.png">
+      <Filter>Resources\Textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\dumpster_Normal.png">
+      <Filter>Resources\Textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\dumpster_Roughness.png">
+      <Filter>Resources\Textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Floor.png">
+      <Filter>Resources\Textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Rims_Bump.png">
+      <Filter>Resources\Textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Rims_Clearcoat.png">
+      <Filter>Resources\Textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Rims_Diffuse.png">
+      <Filter>Resources\Textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Rims_Metallic.png">
+      <Filter>Resources\Textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Rims_Roughness.png">
+      <Filter>Resources\Textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Tire_Bump.png">
+      <Filter>Resources\Textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Tire_Diffuse.png">
+      <Filter>Resources\Textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Tire_Roughness.png">
+      <Filter>Resources\Textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\container2.png">
+      <Filter>Resources\Textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\container2_specular.png">
+      <Filter>Resources\Textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\container2_specular_colored.png">
+      <Filter>Resources\Textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\toy_box_diffuse.png">
+      <Filter>Resources\Textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\toy_box_disp.png">
+      <Filter>Resources\Textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Ch39_1001_Specular.png">
+      <Filter>Resources\Textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Ch39_1001_Normal.png">
+      <Filter>Resources\Textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Ch39_1001_Glossiness.png">
+      <Filter>Resources\Textures</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Resources\Textures\Ch39_1001_Diffuse.png">
+      <Filter>Resources\Textures</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="$(MSBuildThisFileDirectory)Resources\ImGui\PixelifySans-Regular.ttf">
+      <Filter>Resources\ImGui</Filter>
+    </Font>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Application\SpawnData.h">
+      <Filter>Headers\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Objects\Player.h">
+      <Filter>Headers\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Levels\BaseLevel.h">
+      <Filter>Headers\Levels</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Application\GameApp.h">
+      <Filter>Headers\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Application\Factory.h">
+      <Filter>Headers\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Levels\Chunk.h">
+      <Filter>Headers\Levels</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Levels\InfiniteLevel.h">
+      <Filter>Headers\Levels</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Levels\Menu.h">
+      <Filter>Headers\Levels</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\UI\MainMenu.h">
+      <Filter>Headers\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\UI\MenuState.h">
+      <Filter>Headers\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\UI\ControlMenu.h">
+      <Filter>Headers\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\UI\LevelMenu.h">
+      <Filter>Headers\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Application\Renderer.h">
+      <Filter>Headers\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\UI\LoadingMenu.h">
+      <Filter>Headers\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Levels\LightsLevel.h">
+      <Filter>Headers\Levels</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Levels\BaseLevel.cpp">
+      <Filter>Source\Levels</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Objects\Player.cpp">
+      <Filter>Source\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Application\GameApp.cpp">
+      <Filter>Source\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Application\Factory.cpp">
+      <Filter>Source\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Levels\InfiniteLevel.cpp">
+      <Filter>Source\Levels</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Levels\Chunk.cpp">
+      <Filter>Source\Levels</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Levels\Menu.cpp">
+      <Filter>Source\Levels</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\UI\ControlMenu.cpp">
+      <Filter>Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\UI\LevelMenu.cpp">
+      <Filter>Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\UI\MainMenu.cpp">
+      <Filter>Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Application\Renderer.cpp">
+      <Filter>Source\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\UI\MenuState.cpp">
+      <Filter>Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\UI\LoadingMenu.cpp">
+      <Filter>Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Levels\LightsLevel.cpp">
+      <Filter>Source\Levels</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{e205e8f8-6890-4349-b2b3-d3c1206b3924}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{d91ae3b4-0eb1-439f-aeaa-497f4aad096c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\App">
+      <UniqueIdentifier>{7ace82fd-99c3-4309-8879-ebb085e344b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\App">
+      <UniqueIdentifier>{91f75709-0a63-4546-9d59-c5b64faff0c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Objects">
+      <UniqueIdentifier>{acc3e7ec-d06a-4405-bf7e-bd5a0a8cdae4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Componens">
+      <UniqueIdentifier>{afa83140-b2e0-4b4d-afa7-8b24254b6c98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Physics">
+      <UniqueIdentifier>{bb72fe92-bc1f-4fd1-a906-917224eea01f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Physics">
+      <UniqueIdentifier>{40016d2d-91b8-4313-ba91-7af64b4b4b47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Components">
+      <UniqueIdentifier>{e5222fc2-f1e7-424d-9f1b-b5cb5d7e4a63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Objects">
+      <UniqueIdentifier>{77b61f37-734a-4ee5-89a8-42f86019cc17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libraries">
+      <UniqueIdentifier>{b93dbf19-182a-481d-b399-ebdcf7e4d7c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libraries\Imgui">
+      <UniqueIdentifier>{ddbd526e-f07b-463b-a20d-9ab6126d0813}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libraries\Noise">
+      <UniqueIdentifier>{a2b7c769-d987-4945-9e7e-d29e520cec61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Animations">
+      <UniqueIdentifier>{aa368336-a6e7-48e4-8ae8-0b44ed4ea2b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Animations">
+      <UniqueIdentifier>{97687137-abff-464a-a13a-a914e93e5f0f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\App\Event.h">
+      <Filter>Headers\App</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\App\ModelLoader.h">
+      <Filter>Headers\App</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\App\ResourceManager.h">
+      <Filter>Headers\App</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Components\Mesh.h">
+      <Filter>Headers\Componens</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Components\Model.h">
+      <Filter>Headers\Componens</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Components\Shader.h">
+      <Filter>Headers\Componens</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Components\Transform.h">
+      <Filter>Headers\Componens</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Physics\DebugDrawer.h">
+      <Filter>Headers\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Physics\Dispacher.h">
+      <Filter>Headers\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Physics\World.h">
+      <Filter>Headers\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Objects\BaseObject.h">
+      <Filter>Headers\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Objects\Camera.h">
+      <Filter>Headers\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Objects\SkyBox.h">
+      <Filter>Headers\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\Imgui\imconfig.h">
+      <Filter>Libraries\Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\Imgui\imgui.h">
+      <Filter>Libraries\Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\Imgui\imgui_impl_opengl3.h">
+      <Filter>Libraries\Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\Imgui\imgui_impl_opengl3_loader.h">
+      <Filter>Libraries\Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\Imgui\imgui_internal.h">
+      <Filter>Libraries\Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\Imgui\imstb_rectpack.h">
+      <Filter>Libraries\Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\Imgui\imstb_textedit.h">
+      <Filter>Libraries\Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\Imgui\imstb_truetype.h">
+      <Filter>Libraries\Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\stb_image.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\App\InputSystem.h">
+      <Filter>Headers\App</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\App\WindowSystem.h">
+      <Filter>Headers\App</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\Noise\FastNoiseLite.h">
+      <Filter>Libraries\Noise</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\MathUtils.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Animations\Animation.h">
+      <Filter>Headers\Animations</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Animations\Animator.h">
+      <Filter>Headers\Animations</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Animations\Bone.h">
+      <Filter>Headers\Animations</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\AssimpHelper.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Components\SkeletalMesh.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\App\ModelLoader.cpp">
+      <Filter>Source\App</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\App\ResourceManager.cpp">
+      <Filter>Source\App</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Physics\DebugDrawer.cpp">
+      <Filter>Source\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Physics\Dispacher.cpp">
+      <Filter>Source\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Physics\World.cpp">
+      <Filter>Source\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Components\Mesh.cpp">
+      <Filter>Source\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Components\Model.cpp">
+      <Filter>Source\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Components\Shader.cpp">
+      <Filter>Source\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Components\Transform.cpp">
+      <Filter>Source\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Objects\BaseObject.cpp">
+      <Filter>Source\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Objects\Camera.cpp">
+      <Filter>Source\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Objects\Skybox.cpp">
+      <Filter>Source\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\Imgui\imgui.cpp">
+      <Filter>Libraries\Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\Imgui\imgui_demo.cpp">
+      <Filter>Libraries\Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\Imgui\imgui_draw.cpp">
+      <Filter>Libraries\Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\Imgui\imgui_impl_opengl3.cpp">
+      <Filter>Libraries\Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\Imgui\imgui_tables.cpp">
+      <Filter>Libraries\Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\Imgui\imgui_widgets.cpp">
+      <Filter>Libraries\Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\App\InputSystem.cpp">
+      <Filter>Source\App</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\App\WindowSystem.cpp">
+      <Filter>Source\App</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\MathUtils.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Animations\Animation.cpp">
+      <Filter>Source\Animations</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Animations\Animator.cpp">
+      <Filter>Source\Animations</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Animations\Bone.cpp">
+      <Filter>Source\Animations</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Components\SkeletalMesh.cpp" />
+  </ItemGroup>
+</Project>

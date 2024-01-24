@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM64">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM64">
+      <Configuration>Release</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7f2fe357-d184-4b88-8117-e2f1de2262aa}</ProjectGuid>
+    <Keyword>Linux</Keyword>
+    <RootNamespace>HelloCubes</RootNamespace>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <ApplicationType>Linux</ApplicationType>
+    <ApplicationTypeRevision>1.0</ApplicationTypeRevision>
+    <TargetLinuxPlatform>Raspberry</TargetLinuxPlatform>
+    <LinuxProjectType>{8748239F-558C-44D1-944B-07B09C35B330}</LinuxProjectType>
+    <ProjectName>Rasberry</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared">
+    <Import Project="..\Core\Core.vcxitems" Label="Shared" />
+    <Import Project="..\Game\Game.vcxitems" Label="Shared" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <IncludePath>./Headers;.././Game/Resources;.;/usr/include/arm-linux-gnueabbihf/c++/8;/usr/include/x11;/usr/include;/home/pi/glm;/usr/include/bullet;/usr/include/assimp;./Libraries/Imgui</IncludePath>
+    <LibraryPath>/usr/lib/arm-linux-gnueabihf;/usr/lib;$(LibraryPath)</LibraryPath>
+    <MultiProcNumber>4</MultiProcNumber>
+    <SourcePath>.;$(SourcePath)</SourcePath>
+    <RemotePostBuildEventUseInBuild>false</RemotePostBuildEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+    <MultiProcNumber>4</MultiProcNumber>
+    <IncludePath>./Headers;.././Game/Resources;.;/usr/include/arm-linux-gnueabbihf/c++/8;/usr/include/x11;/usr/include;/home/pi/glm;/usr/include/bullet;/usr/include/assimp;$(SolutionDir)Core/Libraries/Imgui;$(SolutionDir)Core/Headers;$(SolutionDir)Game/Headers;$(SolutionDir)Core/Libraries/Noise</IncludePath>
+    <LibraryPath>/usr/lib/arm-linux-gnueabihf;/usr/lib;$(LibraryPath)</LibraryPath>
+    <SourcePath>.;$(SourcePath)</SourcePath>
+    <RemotePostBuildEventUseInBuild>false</RemotePostBuildEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <IncludePath>./Headers;.././Game/Resources;.;/usr/include/arm-linux-gnueabbihf/c++/8;/usr/include/x11;/usr/include;/home/pi/glm;/usr/include/bullet;/usr/include/assimp;./Libraries/Imgui</IncludePath>
+    <LibraryPath>/usr/lib/arm-linux-gnueabihf;/usr/lib;$(LibraryPath)</LibraryPath>
+    <SourcePath>.;$(SourcePath)</SourcePath>
+    <RemotePostBuildEventUseInBuild>false</RemotePostBuildEventUseInBuild>
+    <MultiProcNumber>4</MultiProcNumber>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+    <IncludePath>./Headers;.././Game/Resources;.;/usr/include/arm-linux-gnueabbihf/c++/8;/usr/include/x11;/usr/include;/home/pi/glm;/usr/include/bullet;/usr/include/assimp;$(SolutionDir)Core/Libraries/Imgui;$(SolutionDir)Core/Headers;$(SolutionDir)Game/Headers;$(SolutionDir)Core/Libraries/Noise</IncludePath>
+    <LibraryPath>/usr/lib/arm-linux-gnueabihf;/usr/lib;$(LibraryPath)</LibraryPath>
+    <SourcePath>.;$(SourcePath)</SourcePath>
+    <RemotePostBuildEventUseInBuild>false</RemotePostBuildEventUseInBuild>
+    <MultiProcNumber>4</MultiProcNumber>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <Link>
+      <LibraryDependencies>GLESv2;EGL;pthread;X11;Xrandr;BulletCollision;BulletSoftBody;BulletDynamics;LinearMath;assimp;%(LibraryDependencies)</LibraryDependencies>
+    </Link>
+    <RemotePostBuildEvent>
+      <Command>
+      </Command>
+      <Message>
+      </Message>
+    </RemotePostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <Link>
+      <LibraryDependencies>GLESv2;EGL;pthread;X11;Xrandr;BulletCollision;BulletSoftBody;BulletDynamics;LinearMath;assimp;%(LibraryDependencies)</LibraryDependencies>
+    </Link>
+    <RemotePostBuildEvent>
+      <Command>
+      </Command>
+      <Message>export pin 17 using the gpio utility so that we can execute the blink program without sudo</Message>
+    </RemotePostBuildEvent>
+    <ClCompile>
+      <CppLanguageStandard>c++17</CppLanguageStandard>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <CompileAs>CompileAsCpp</CompileAs>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\main.cpp" />
+    <ClCompile Include="Source\Input.cpp" />
+    <ClCompile Include="Source\WindowManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Headers\Input.h" />
+    <ClInclude Include="Headers\WindowManager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Update="C:\Game development\school\Perforce\Year1\BlockB\HelloCubes\Game\Resources\Models\Collumn.obj">
+      <FileType>Document</FileType>
+    </Resource>
+  </ItemGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <ClCompile>
+      <PreprocessorDefinitions>DEBUG=1;GLM_ENABLE_EXPERIMENTAL;BULLET;GLES3</PreprocessorDefinitions>
+      <CppLanguageStandard>c++17</CppLanguageStandard>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+    </ClCompile>
+    <Link />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+    <ClCompile>
+      <Verbose>true</Verbose>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>Pi4</PreprocessorDefinitions>
+      <CppLanguageStandard>c++17</CppLanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <AdditionalOptions>-Wno-conversion -Wno-misleading-indentation %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <LibraryDependencies>GLESv2;EGL;pthread;X11;Xrandr;BulletCollision;BulletSoftBody;BulletDynamics;LinearMath;assimp;%(LibraryDependencies)</LibraryDependencies>
+    </Link>
+    <RemotePostBuildEvent>
+      <Command>
+      </Command>
+    </RemotePostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+    <RemotePostBuildEvent>
+      <Command>
+      </Command>
+    </RemotePostBuildEvent>
+    <Link>
+      <LibraryDependencies>GLESv2;EGL;pthread;X11;Xrandr;BulletCollision;BulletSoftBody;BulletDynamics;LinearMath;assimp;%(LibraryDependencies)</LibraryDependencies>
+    </Link>
+    <ClCompile>
+      <CppLanguageStandard>c++17</CppLanguageStandard>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <Verbose>true</Verbose>
+      <AdditionalOptions>-Wno-conversion -Wno-misleading-indentation %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

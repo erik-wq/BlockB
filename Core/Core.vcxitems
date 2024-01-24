@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{caf5afb8-3446-449f-be27-8771f370d213}</ItemsProjectGuid>
+    <ItemsSccProjectName />
+    <ItemsSccAuxPath />
+    <ItemsSccLocalPath />
+    <ItemsSccProvider />
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Animations\Animation.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Animations\Animator.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Animations\Bone.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\App\Event.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\App\InputSystem.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\App\ModelLoader.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\App\ResourceManager.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\App\WindowSystem.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\AssimpHelper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Components\Mesh.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Components\Model.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Components\Shader.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Components\SkeletalMesh.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Components\Transform.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\MathUtils.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Objects\BaseObject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Objects\Camera.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Objects\SkyBox.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Physics\DebugDrawer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Physics\Dispacher.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\Physics\World.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\stb_image.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\Imgui\imconfig.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\Imgui\imgui.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\Imgui\imgui_impl_opengl3.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\Imgui\imgui_impl_opengl3_loader.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\Imgui\imgui_internal.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\Imgui\imstb_rectpack.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\Imgui\imstb_textedit.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\Imgui\imstb_truetype.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Libraries\Noise\FastNoiseLite.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\Imgui\imgui.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\Imgui\imgui_demo.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\Imgui\imgui_draw.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\Imgui\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\Imgui\imgui_tables.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Libraries\Imgui\imgui_widgets.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Animations\Animation.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Animations\Animator.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Animations\Bone.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\App\InputSystem.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\App\ModelLoader.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\App\ResourceManager.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\App\WindowSystem.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Components\Mesh.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Components\Model.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Components\Shader.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Components\SkeletalMesh.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Components\Transform.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\MathUtils.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Objects\BaseObject.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Objects\Camera.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Objects\Skybox.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Physics\DebugDrawer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Physics\Dispacher.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source\Physics\World.cpp" />
+  </ItemGroup>
+</Project>
